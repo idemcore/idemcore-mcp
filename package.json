@@ -1,0 +1,49 @@
+{
+  "name": "@idemcore/mcp",
+  "version": "0.1.5",
+  "mcpName": "net.idemcore/mcp",
+  "description": "MCP server for Idemcore: chat with signed receipts and verify them offline.",
+  "author": "Don Wick <don.wick@idemcore.net>",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "idemcore-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idemcore/idemcore-mcp.git"
+  },
+  "homepage": "https://idemcore.net/integrations/mcp",
+  "keywords": [
+    "idemcore",
+    "mcp",
+    "model-context-protocol",
+    "receipts",
+    "verification"
+  ]
+}

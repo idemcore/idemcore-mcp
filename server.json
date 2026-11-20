@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "net.idemcore/mcp",
+  "title": "Idemcore",
+  "description": "Chat with open models and get a signed receipt for every answer; verify receipts offline.",
+  "version": "0.1.5",
+  "websiteUrl": "https://idemcore.net/integrations/mcp",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@idemcore/mcp",
+      "version": "0.1.5",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        { "name": "IDEMCORE_API_KEY", "description": "Idemcore API key from idemcore.net. Needed only for chat, get and export; verifying receipts needs no key.", "isRequired": false, "isSecret": true, "format": "string" },
+        { "name": "IDEMCORE_MODEL", "description": "Default model id for idemcore_chat.", "isRequired": false, "format": "string" }
+      ]
+    }
+  ]
+}
